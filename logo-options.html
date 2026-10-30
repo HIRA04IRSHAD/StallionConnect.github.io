@@ -23,9 +23,17 @@
       --green-soft: #e4f4e8;
     }
 
-    /* Logo colour sets: every logo reads these variables */
-    .light { --n: #01337a; --g: #038e29; --gk: #3fb556; --bg: #fff; --k: #fff; }
-    .dark { --n: #fff; --g: #3fb556; --gk: #038e29; --bg: #0a2152; --k: #0a2152; }
+    /* Colour palettes: --p main colour, --a accent, --ab brighter accent, --deep dark background */
+    :root, .pal-a { --p: #01337a; --a: #038e29; --ab: #3fb556; --deep: #0a2152; }
+    .pal-b { --p: #0b2a5b; --a: #b8860b; --ab: #f2c14e; --deep: #071a3d; }
+    .pal-c { --p: #1e40af; --a: #ea580c; --ab: #fb923c; --deep: #0f1d4d; }
+    .pal-d { --p: #0f766e; --a: #e8574f; --ab: #ff8f85; --deep: #073b37; }
+    .pal-e { --p: #5b21b6; --a: #0891b2; --ab: #22d3ee; --deep: #2a0e5c; }
+    .pal-f { --p: #1f2937; --a: #dc2626; --ab: #f87171; --deep: #111827; }
+
+    /* Logo colour sets: every logo reads --n, --g, --gk, --bg and --k, built from the palette above */
+    .light { --n: var(--p); --g: var(--a); --gk: var(--ab); --bg: #fff; --k: #fff; }
+    .dark { --n: #fff; --g: var(--ab); --gk: var(--a); --bg: var(--deep); --k: var(--deep); }
 
     * { box-sizing: border-box; }
     body {
@@ -91,14 +99,14 @@
       background: #fff;
       border: 1px solid var(--line);
       border-radius: 22px;
-      scroll-margin-top: 16px;
+      scroll-margin-top: 72px; /* clears the sticky colour bar */
     }
     .option-head { display: flex; align-items: center; gap: 12px; padding: 20px 24px 0; }
     .num {
       flex: none;
       padding: 4px 11px;
       border-radius: 999px;
-      background: var(--navy);
+      background: var(--ink);
       color: #fff;
       font-size: 12px;
       font-weight: 700;
@@ -138,6 +146,49 @@
     .desc p { margin: 0 0 12px; color: var(--ink); }
     .tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; }
     .tags li { padding: 3px 10px; border-radius: 999px; background: var(--page); color: var(--navy); font-size: 12.5px; font-weight: 500; }
+    .pal-note { display: flex; align-items: center; gap: 8px; margin: 14px 0 0; font-size: 13.5px; color: var(--muted); }
+    .pal-note strong { font-weight: 600; color: var(--ink); }
+
+    /* Colour switcher */
+    .palette-intro { max-width: 70ch; margin: -8px 0 12px; color: var(--muted); }
+    .palette-bar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      gap: 8px;
+      margin: 0 0 20px;
+      padding: 10px 0;
+      overflow-x: auto;
+      background: rgb(243 246 251 / .94);
+      -webkit-backdrop-filter: blur(8px);
+      backdrop-filter: blur(8px);
+      scrollbar-width: none;
+    }
+    .palette-bar::-webkit-scrollbar { display: none; }
+    .palette-bar button {
+      display: inline-flex;
+      flex: none;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 14px 7px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #fff;
+      color: var(--ink);
+      font: 600 13px/1.2 Inter, system-ui, sans-serif;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+    .palette-bar button:first-child { padding-left: 14px; }
+    .palette-bar button:hover { border-color: var(--ink); }
+    .palette-bar button:focus-visible { outline: 3px solid var(--green); outline-offset: 2px; }
+    .palette-bar button[aria-pressed="true"] { border-color: var(--ink); background: var(--ink); color: #fff; }
+
+    /* Two-dot swatch showing the palette's main colour and accent */
+    .sw { display: inline-flex; flex: none; }
+    .sw::before, .sw::after { content: ""; width: 14px; height: 14px; border-radius: 50%; background: var(--p); box-shadow: 0 0 0 1.5px #fff; }
+    .sw::after { margin-left: -5px; background: var(--a); }
 
     /* Option 6 is a typed wordmark, so it is built in HTML */
     .wm6 {
@@ -290,7 +341,7 @@
   <header class="top wrap">
     <span class="pill">Draft concepts · Round 1</span>
     <h1>Logo options for Stallion Connect</h1>
-    <p>Six new directions for the logo, all based on the current one. Have a look, pick a favourite (or two), and tell us what you would change. Nothing here is final.</p>
+    <p>Six new directions for the logo, all based on the current one and shown in a range of colours. Have a look, pick a favourite design and colour scheme, and tell us what you would change. Nothing here is final.</p>
   </header>
 
   <main class="wrap">
@@ -300,18 +351,28 @@
         <p class="label">Current logo</p>
         <h2 id="current-title">What we kept from it</h2>
         <ul class="kept">
-          <li>The navy and green brand colours</li>
           <li>The "S" and "C" initials</li>
           <li>The headset, for calls and customer support</li>
+          <li>Navy and green, now one of six colour choices</li>
         </ul>
       </div>
     </section>
 
     <h2 class="section-title">The six options</h2>
+    <p class="palette-intro">Each option is shown in a suggested colour scheme. Tap a colour scheme below to see every option in it: any design can be paired with any colours.</p>
+    <div class="palette-bar" role="group" aria-label="Colour schemes">
+      <button type="button" data-pal="" aria-pressed="true">Suggested</button>
+      <button type="button" class="pal-a" data-pal="a" aria-pressed="false"><span class="sw"></span>A · Navy &amp; Green</button>
+      <button type="button" class="pal-b" data-pal="b" aria-pressed="false"><span class="sw"></span>B · Navy &amp; Gold</button>
+      <button type="button" class="pal-c" data-pal="c" aria-pressed="false"><span class="sw"></span>C · Blue &amp; Orange</button>
+      <button type="button" class="pal-d" data-pal="d" aria-pressed="false"><span class="sw"></span>D · Teal &amp; Coral</button>
+      <button type="button" class="pal-e" data-pal="e" aria-pressed="false"><span class="sw"></span>E · Purple &amp; Cyan</button>
+      <button type="button" class="pal-f" data-pal="f" aria-pressed="false"><span class="sw"></span>F · Charcoal &amp; Red</button>
+    </div>
     <div class="options">
 
       <!-- Option 1 -->
-      <article class="option" id="option-1">
+      <article class="option pal-a" id="option-1" data-pal-default="a">
         <div class="option-head"><span class="num">Option 1</span><h2>Refined Monogram</h2></div>
         <div class="stage main light"><svg viewBox="0 0 400 120" role="img" aria-label="Option 1 logo"><use href="#o1-logo" width="400" height="120"/></svg></div>
         <div class="variants">
@@ -325,11 +386,12 @@
         <div class="desc">
           <p>The current headset-and-initials idea, redrawn with cleaner shapes and a modern font. The safest choice: anyone who knows the old logo will still recognise it.</p>
           <ul class="tags"><li>Closest to current</li><li>Classic</li><li>Font: Montserrat</li></ul>
+          <p class="pal-note"><span class="sw"></span>Colours: <strong class="pal-name">A · Navy &amp; Green</strong></p>
         </div>
       </article>
 
       <!-- Option 2 -->
-      <article class="option" id="option-2">
+      <article class="option pal-c" id="option-2" data-pal-default="c">
         <div class="option-head"><span class="num">Option 2</span><h2>Two-Way S</h2></div>
         <div class="stage main light"><svg viewBox="0 0 470 120" role="img" aria-label="Option 2 logo"><use href="#o2-logo" width="470" height="120"/></svg></div>
         <div class="variants">
@@ -343,11 +405,12 @@
         <div class="desc">
           <p>An "S" made of two arrows, one going out and one coming in, for outbound and inbound calls. Bold, simple and easy to remember.</p>
           <ul class="tags"><li>Bold &amp; simple</li><li>Works well small</li><li>Font: Sora</li></ul>
+          <p class="pal-note"><span class="sw"></span>Colours: <strong class="pal-name">C · Blue &amp; Orange</strong></p>
         </div>
       </article>
 
       <!-- Option 3 -->
-      <article class="option" id="option-3">
+      <article class="option pal-d" id="option-3" data-pal-default="d">
         <div class="option-head"><span class="num">Option 3</span><h2>Conversation</h2></div>
         <div class="stage main light"><svg viewBox="0 0 320 120" role="img" aria-label="Option 3 logo"><use href="#o3-logo" width="320" height="120"/></svg></div>
         <div class="variants">
@@ -361,11 +424,12 @@
         <div class="desc">
           <p>Two overlapping speech bubbles carrying the S and C: a conversation and a connection. Friendly, and it says "customer support" at a glance.</p>
           <ul class="tags"><li>Friendly</li><li>Support-focused</li><li>Font: Outfit</li></ul>
+          <p class="pal-note"><span class="sw"></span>Colours: <strong class="pal-name">D · Teal &amp; Coral</strong></p>
         </div>
       </article>
 
       <!-- Option 4 -->
-      <article class="option" id="option-4">
+      <article class="option pal-f" id="option-4" data-pal-default="f">
         <div class="option-head"><span class="num">Option 4</span><h2>The Stallion</h2></div>
         <div class="stage main light"><svg viewBox="0 0 350 120" role="img" aria-label="Option 4 logo"><use href="#o4-logo" width="350" height="120"/></svg></div>
         <div class="variants">
@@ -379,11 +443,12 @@
         <div class="desc">
           <p>A stallion wearing a headset: the company name told in one picture. The most memorable option, and it can double as a mascot.</p>
           <ul class="tags"><li>Memorable</li><li>Strong personality</li><li>Font: Oswald</li></ul>
+          <p class="pal-note"><span class="sw"></span>Colours: <strong class="pal-name">F · Charcoal &amp; Red</strong></p>
         </div>
       </article>
 
       <!-- Option 5 -->
-      <article class="option" id="option-5">
+      <article class="option pal-b" id="option-5" data-pal-default="b">
         <div class="option-head"><span class="num">Option 5</span><h2>Trust Shield</h2></div>
         <div class="stage main light"><svg class="tall" viewBox="0 0 360 214" role="img" aria-label="Option 5 logo"><use href="#o5-logo" width="360" height="214"/></svg></div>
         <div class="variants">
@@ -397,11 +462,12 @@
         <div class="desc">
           <p>A shield with serif initials, signalling trust and security. Well suited to banking and financial clients, and it keeps the serif style of the current logo.</p>
           <ul class="tags"><li>Trustworthy</li><li>Corporate</li><li>Font: DM Serif Display</li></ul>
+          <p class="pal-note"><span class="sw"></span>Colours: <strong class="pal-name">B · Navy &amp; Gold</strong></p>
         </div>
       </article>
 
       <!-- Option 6 -->
-      <article class="option" id="option-6">
+      <article class="option pal-e" id="option-6" data-pal-default="e">
         <div class="option-head"><span class="num">Option 6</span><h2>Headset Wordmark</h2></div>
         <div class="stage main light">
           <div class="wm6" role="img" aria-label="Option 6 logo: stallion connect"><span class="n">stallion</span>&nbsp;<span class="g">c</span><svg class="o" viewBox="-14 0 128 122" aria-hidden="true"><use href="#o6-o" x="-14" width="128" height="122"/></svg><span class="g">nnect</span></div>
@@ -419,6 +485,7 @@
         <div class="desc">
           <p>A clean text logo where the "o" in connect becomes a headset. Modern and digital-first; it looks sharp on the website and social media.</p>
           <ul class="tags"><li>Modern</li><li>Text-led</li><li>Font: Poppins</li></ul>
+          <p class="pal-note"><span class="sw"></span>Colours: <strong class="pal-name">E · Purple &amp; Cyan</strong></p>
         </div>
       </article>
     </div>
@@ -426,13 +493,13 @@
     <section class="compare" aria-labelledby="compare-title">
       <h2 id="compare-title">All six icons side by side</h2>
       <p>How each option looks as a WhatsApp or social media profile picture.</p>
-      <div class="dp-row light">
-        <figure><div class="tile dp"><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#o1-icon" width="120" height="120"/></svg></div><figcaption>Option 1</figcaption></figure>
-        <figure><div class="tile dp"><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#o2-icon" width="120" height="120"/></svg></div><figcaption>Option 2</figcaption></figure>
-        <figure><div class="tile dp"><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#o3-icon" width="120" height="120"/></svg></div><figcaption>Option 3</figcaption></figure>
-        <figure><div class="tile dp"><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#o4-icon" width="120" height="120"/></svg></div><figcaption>Option 4</figcaption></figure>
-        <figure><div class="tile dp"><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#o5-icon" width="120" height="120"/></svg></div><figcaption>Option 5</figcaption></figure>
-        <figure><div class="tile dp"><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#o6-icon" width="120" height="120"/></svg></div><figcaption>Option 6</figcaption></figure>
+      <div class="dp-row">
+        <figure class="pal-a" data-pal-default="a"><div class="tile dp light"><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#o1-icon" width="120" height="120"/></svg></div><figcaption>Option 1</figcaption></figure>
+        <figure class="pal-c" data-pal-default="c"><div class="tile dp light"><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#o2-icon" width="120" height="120"/></svg></div><figcaption>Option 2</figcaption></figure>
+        <figure class="pal-d" data-pal-default="d"><div class="tile dp light"><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#o3-icon" width="120" height="120"/></svg></div><figcaption>Option 3</figcaption></figure>
+        <figure class="pal-f" data-pal-default="f"><div class="tile dp light"><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#o4-icon" width="120" height="120"/></svg></div><figcaption>Option 4</figcaption></figure>
+        <figure class="pal-b" data-pal-default="b"><div class="tile dp light"><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#o5-icon" width="120" height="120"/></svg></div><figcaption>Option 5</figcaption></figure>
+        <figure class="pal-e" data-pal-default="e"><div class="tile dp light"><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#o6-icon" width="120" height="120"/></svg></div><figcaption>Option 6</figcaption></figure>
       </div>
     </section>
 
@@ -441,7 +508,8 @@
       <p>Just send us a message with your answers to these:</p>
       <ol>
         <li>Which option do you like most?<span>A first and second choice is even better, for example "Option 3, then Option 1".</span></li>
-        <li>What would you change?<span>Colours, font, icon, spacing: anything that doesn't feel right.</span></li>
+        <li>Which colours do you like?<span>Use the palette letter, for example "Option 3 in colours C", or say if you'd rather keep the current navy and green.</span></li>
+        <li>What would you change?<span>Font, icon, spacing: anything that doesn't feel right.</span></li>
         <li>Should "Pvt Ltd" appear in the logo?<span>Or only on letterheads and documents.</span></li>
         <li>Would you like to combine options?<span>For example the icon from one option with the text style of another.</span></li>
       </ol>
@@ -452,5 +520,25 @@
     Concept sketches for discussion, prepared for Stallion Connect Pvt Ltd · Round 1 · 31 October 2026.<br>
     Final files (SVG, PNG and PDF) will be prepared for the chosen design.
   </footer>
+
+  <script>
+    // Colour switcher: shows every option in the chosen palette; "Suggested" restores each option's own
+    const palettes = { a: 'A · Navy & Green', b: 'B · Navy & Gold', c: 'C · Blue & Orange', d: 'D · Teal & Coral', e: 'E · Purple & Cyan', f: 'F · Charcoal & Red' };
+    const palClasses = Object.keys(palettes).map((key) => `pal-${key}`);
+    const palButtons = document.querySelectorAll('.palette-bar button');
+
+    function showPalette(choice) {
+      document.querySelectorAll('[data-pal-default]').forEach((el) => {
+        const key = choice || el.dataset.palDefault;
+        el.classList.remove(...palClasses);
+        el.classList.add(`pal-${key}`);
+        const name = el.querySelector('.pal-name');
+        if (name) name.textContent = palettes[key];
+      });
+      palButtons.forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.pal === choice)));
+    }
+
+    palButtons.forEach((button) => button.addEventListener('click', () => showPalette(button.dataset.pal)));
+  </script>
 </body>
 </html>
