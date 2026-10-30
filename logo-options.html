@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Logo Options · Stallion Connect</title>
+  <meta name="description" content="Round 1 logo concepts for Stallion Connect Pvt Ltd.">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=Inter:wght@400;500;600;700&amp;family=Montserrat:wght@700;800&amp;family=Oswald:wght@500;600&amp;family=Outfit:wght@600;800&amp;family=Poppins:wght@700&amp;family=Sora:wght@600;700&amp;display=swap">
+  <style>
+    :root {
+      --ink: #0c1b36;
+      --text: #33415c;
+      --muted: #5b6a85;
+      --line: #e2e8f2;
+      --page: #f3f6fb;
+      --navy: #01337a;
+      --navy-deep: #0a2152;
+      --green: #038e29;
+      --green-soft: #e4f4e8;
+    }
+
+    /* Logo colour sets: every logo reads these variables */
+    .light { --n: #01337a; --g: #038e29; --gk: #3fb556; --bg: #fff; --k: #fff; }
+    .dark { --n: #fff; --g: #3fb556; --gk: #038e29; --bg: #0a2152; --k: #0a2152; }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--text);
+      font: 16px/1.6 Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1, h2, h3 { margin: 0; color: var(--ink); line-height: 1.2; letter-spacing: -0.01em; }
+    svg { display: block; }
+    .wrap { width: min(100% - 32px, 1120px); margin-inline: auto; }
+
+    /* Intro */
+    .top { padding: 48px 0 8px; }
+    .pill {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: var(--green-soft);
+      color: #026527;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .top h1 { margin: 14px 0 10px; font-size: clamp(28px, 4.2vw, 42px); letter-spacing: -0.02em; }
+    .top p { max-width: 66ch; margin: 0; font-size: 17px; color: var(--muted); }
+
+    .current {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+      gap: 28px;
+      align-items: center;
+      margin: 28px 0 44px;
+      padding: 24px 28px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+    }
+    .current img { width: 100%; max-width: 360px; height: auto; margin-inline: auto; }
+    .label { margin-bottom: 6px; font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+    .current h2 { margin-bottom: 10px; font-size: 20px; }
+    .kept { display: grid; gap: 6px; margin: 0; padding: 0; list-style: none; }
+    .kept li { position: relative; padding-left: 22px; color: var(--ink); }
+    .kept li::before {
+      content: "";
+      position: absolute;
+      top: .55em;
+      left: 2px;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--green);
+    }
+
+    /* Option cards */
+    .section-title { margin: 0 0 18px; font-size: 24px; }
+    .options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+
+    .option {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      scroll-margin-top: 16px;
+    }
+    .option-head { display: flex; align-items: center; gap: 12px; padding: 20px 24px 0; }
+    .num {
+      flex: none;
+      padding: 4px 11px;
+      border-radius: 999px;
+      background: var(--navy);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .option-head h2 { font-size: 19px; }
+
+    .stage { display: grid; place-items: center; container-type: inline-size; }
+    .stage.dark { background: var(--bg); }
+    .stage.main { min-height: 230px; padding: 36px 32px; }
+    .stage.main svg { width: 100%; max-width: 400px; height: auto; }
+    .stage.main svg.tall { max-width: 330px; }
+
+    .variants { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 12px; padding: 0 24px; }
+    .variants .stage { min-height: 116px; padding: 18px; border-radius: 14px; }
+    .variants .stage svg { width: 100%; max-width: 240px; height: auto; }
+    .variants .stage svg.tall { max-width: 170px; }
+
+    .icons {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      gap: 10px;
+      padding: 12px;
+      background: var(--page);
+      border-radius: 14px;
+    }
+    .icon-demo { display: grid; justify-items: center; gap: 6px; font-size: 11px; color: var(--muted); }
+    .tile { display: grid; place-items: center; background: #fff; box-shadow: 0 1px 3px rgb(10 33 82 / .14); }
+    .tile.app { width: 60px; height: 60px; padding: 8px; border-radius: 15px; }
+    .tile.dp { width: 60px; height: 60px; padding: 8px; border-radius: 50%; }
+    .tile.fav { width: 28px; height: 28px; padding: 2px; border-radius: 6px; }
+    .tile svg { width: 100%; height: 100%; }
+
+    .desc { padding: 18px 24px 24px; }
+    .desc p { margin: 0 0 12px; color: var(--ink); }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; }
+    .tags li { padding: 3px 10px; border-radius: 999px; background: var(--page); color: var(--navy); font-size: 12.5px; font-weight: 500; }
+
+    /* Option 6 is a typed wordmark, so it is built in HTML */
+    .wm6 {
+      display: flex;
+      align-items: baseline;
+      font-family: Poppins, sans-serif;
+      font-weight: 700;
+      font-size: 11.5cqi;
+      line-height: 1;
+      letter-spacing: -0.035em;
+      white-space: nowrap;
+    }
+    .wm6 .n { color: var(--n); }
+    .wm6 .g { color: var(--g); }
+    /* Ring = 100 of 122 units tall = 0.56em (x-height); shifted down so the ring, not the mic, sits on the baseline */
+    .stage .wm6 .o { display: inline-block; width: .717em; max-width: none; height: .683em; margin: 0 -.025em; transform: translateY(.123em); }
+    .variants .wm6 { font-size: 11cqi; }
+
+    /* Comparison */
+    .compare { margin: 48px 0 0; padding: 28px; background: #fff; border: 1px solid var(--line); border-radius: 22px; }
+    .compare > p { margin: 6px 0 22px; color: var(--muted); }
+    .dp-row { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 16px; }
+    .dp-row figure { display: grid; justify-items: center; gap: 8px; margin: 0; }
+    .dp-row .tile.dp { width: 84px; height: 84px; padding: 12px; }
+    .dp-row figcaption { font-size: 13px; font-weight: 600; color: var(--ink); }
+
+    /* Feedback */
+    .feedback {
+      margin: 24px 0 0;
+      padding: 32px;
+      border-radius: 22px;
+      background: linear-gradient(140deg, var(--navy) 0%, var(--navy-deep) 100%);
+      color: rgb(255 255 255 / .82);
+    }
+    .feedback h2 { color: #fff; font-size: 24px; }
+    .feedback > p { margin: 8px 0 18px; }
+    .feedback ol { display: grid; gap: 10px; margin: 0; padding-left: 22px; }
+    .feedback li { color: #fff; }
+    .feedback li span { display: block; color: rgb(255 255 255 / .72); font-size: 15px; }
+
+    footer { padding: 28px 0 48px; font-size: 13.5px; color: var(--muted); text-align: center; }
+
+    @media (max-width: 900px) {
+      .options { grid-template-columns: minmax(0, 1fr); }
+      .current { grid-template-columns: minmax(0, 1fr); }
+    }
+    @media (max-width: 560px) {
+      .top { padding-top: 32px; }
+      .stage.main { min-height: 180px; padding: 28px 20px; }
+      .option-head, .desc { padding-inline: 18px; }
+      .variants { grid-template-columns: minmax(0, 1fr); padding: 0 18px; }
+      .dp-row { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .compare, .feedback { padding: 22px 18px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Logo artwork. Each logo is a symbol that reads its colours from the
+       --n (navy part), --g (green part), --bg (background) and --k (cut-out) variables. -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <!-- Option 1: refined monogram -->
+      <symbol id="o1-icon" viewBox="0 0 120 120">
+        <path d="M12 70A48 48 0 0 1 108 70" fill="none" stroke-width="8" stroke-linecap="round" style="stroke:var(--g)"/>
+        <rect x="4" y="60" width="16" height="32" rx="8" style="fill:var(--g)"/>
+        <rect x="100" y="60" width="16" height="32" rx="8" style="fill:var(--g)"/>
+        <path d="M108 92C108 106 96 112 84 112" fill="none" stroke-width="5" stroke-linecap="round" style="stroke:var(--g)"/>
+        <rect x="62" y="106" width="22" height="12" rx="6" style="fill:var(--n)"/>
+        <text x="63" y="89" text-anchor="middle" font-family="Montserrat" font-weight="800" font-size="48" letter-spacing="-6" stroke-width="5" paint-order="stroke" style="stroke:var(--bg)"><tspan style="fill:var(--n)">S</tspan><tspan style="fill:var(--g)">C</tspan></text>
+      </symbol>
+      <symbol id="o1-logo" viewBox="0 0 400 120">
+        <use href="#o1-icon" width="120" height="120"/>
+        <rect x="140" y="22" width="2" height="76" opacity=".3" style="fill:var(--n)"/>
+        <text x="162" y="56" font-family="Montserrat" font-weight="800" font-size="34" textLength="220" lengthAdjust="spacing" style="fill:var(--n)">STALLION</text>
+        <text x="162" y="94" font-family="Montserrat" font-weight="800" font-size="34" textLength="220" lengthAdjust="spacing" style="fill:var(--g)">CONNECT</text>
+        <text x="272" y="114" text-anchor="middle" font-family="Montserrat" font-weight="700" font-size="10.5" letter-spacing="7" style="fill:var(--n)">PVT LTD</text>
+      </symbol>
+
+      <!-- Option 2: two-way S (inbound and outbound arrows) -->
+      <symbol id="o2-icon" viewBox="0 0 120 120">
+        <path d="M76.09 26.5A21 21 0 1 0 56.35 60.68" fill="none" stroke-width="14" style="stroke:var(--n)"/>
+        <path d="M63.65 61.32A21 21 0 1 1 43.91 95.5" fill="none" stroke-width="14" style="stroke:var(--g)"/>
+        <path d="M85.09 37.22 66.13 34.86 86.05 18.14Z" style="fill:var(--n)"/>
+        <path d="M34.91 84.78 53.87 87.14 33.95 103.86Z" style="fill:var(--g)"/>
+      </symbol>
+      <symbol id="o2-logo" viewBox="0 0 470 120">
+        <use href="#o2-icon" width="120" height="120"/>
+        <text x="106" y="70" font-family="Sora" font-weight="700" font-size="36" letter-spacing="-0.5"><tspan style="fill:var(--n)">Stallion</tspan><tspan style="fill:var(--g)"> Connect</tspan></text>
+        <text x="108" y="96" font-family="Sora" font-weight="600" font-size="11" textLength="340" lengthAdjust="spacing" opacity=".75" style="fill:var(--n)">BPO · CALL CENTRE · BACK-OFFICE</text>
+      </symbol>
+
+      <!-- Option 3: conversation bubbles -->
+      <symbol id="o3-icon" viewBox="0 0 120 120">
+        <path d="M62 14H90A20 20 0 0 1 110 34V52A20 20 0 0 1 104.14 66.14L108 84L88 72H62A20 20 0 0 1 42 52V34A20 20 0 0 1 62 14Z" style="fill:var(--g)"/>
+        <text x="91" y="52" text-anchor="middle" font-family="Outfit" font-weight="800" font-size="30" style="fill:var(--k)">C</text>
+        <path d="M30 40H58A20 20 0 0 1 78 60V78A20 20 0 0 1 58 98H32L12 110L15.86 92.14A20 20 0 0 1 10 78V60A20 20 0 0 1 30 40Z" stroke-width="5" stroke-linejoin="round" paint-order="stroke" style="fill:var(--n);stroke:var(--bg)"/>
+        <text x="44" y="82" text-anchor="middle" font-family="Outfit" font-weight="800" font-size="36" style="fill:var(--k)">S</text>
+      </symbol>
+      <symbol id="o3-logo" viewBox="0 0 320 120">
+        <use href="#o3-icon" width="120" height="120"/>
+        <text x="136" y="68" font-family="Outfit" font-weight="800" font-size="46" textLength="168" lengthAdjust="spacing" style="fill:var(--n)">Stallion</text>
+        <text x="138" y="94" font-family="Outfit" font-weight="600" font-size="15" textLength="166" lengthAdjust="spacing" style="fill:var(--g)">CONNECT</text>
+      </symbol>
+
+      <!-- Option 4: stallion with headset -->
+      <symbol id="o4-icon" viewBox="0 0 120 120">
+        <path d="M20 118C20 86 28 54 48 31L53 9L62 25C72 32 84 44 94 56C100 63 105 70 107 77C109 85 103 91 96 91C90 91 84 88 78 85C72 83 68 90 62 90C56 90 54 84 56 80C58 94 62 106 68 118Z" style="fill:var(--n)"/>
+        <ellipse cx="70" cy="40" rx="3.2" ry="2.5" transform="rotate(30 70 40)" style="fill:var(--k)"/>
+        <ellipse cx="101" cy="78" rx="2.4" ry="1.6" transform="rotate(50 101 78)" style="fill:var(--k)"/>
+        <path d="M51 33C56 44 60 54 62 62" fill="none" stroke-width="5" stroke-linecap="round" style="stroke:var(--g)"/>
+        <circle cx="63" cy="70" r="9.5" stroke-width="3" paint-order="stroke" style="fill:var(--g);stroke:var(--bg)"/>
+        <path d="M70 76C76 84 84 87 92 86" fill="none" stroke-width="3.5" stroke-linecap="round" style="stroke:var(--g)"/>
+        <circle cx="94" cy="86" r="3.5" style="fill:var(--g)"/>
+      </symbol>
+      <symbol id="o4-logo" viewBox="0 0 350 120">
+        <use href="#o4-icon" width="120" height="120"/>
+        <text x="136" y="68" font-family="Oswald" font-weight="600" font-size="48" textLength="200" lengthAdjust="spacing" style="fill:var(--n)">STALLION</text>
+        <text x="138" y="98" font-family="Oswald" font-weight="500" font-size="22" textLength="198" lengthAdjust="spacing" style="fill:var(--g)">CONNECT</text>
+      </symbol>
+
+      <!-- Option 5: trust shield (vertical layout) -->
+      <symbol id="o5-icon" viewBox="0 0 120 120">
+        <path d="M60 6L104 20V58C104 88 84 106 60 114C36 106 16 88 16 58V20Z" style="fill:var(--n)"/>
+        <path d="M60 6L104 20V58C104 88 84 106 60 114C36 106 16 88 16 58V20Z" fill="none" stroke-width="3" transform="translate(60 60) scale(.84) translate(-60 -60)" style="stroke:var(--gk)"/>
+        <text x="60" y="80" text-anchor="middle" font-family="DM Serif Display" font-size="54" letter-spacing="-4"><tspan style="fill:var(--k)">S</tspan><tspan style="fill:var(--gk)">C</tspan></text>
+      </symbol>
+      <symbol id="o5-logo" viewBox="0 0 360 214">
+        <use href="#o5-icon" x="120" width="120" height="120"/>
+        <text x="180" y="164" text-anchor="middle" font-family="DM Serif Display" font-size="30" letter-spacing="1"><tspan style="fill:var(--n)">STALLION</tspan><tspan style="fill:var(--g)"> CONNECT</tspan></text>
+        <rect x="74" y="186" width="44" height="1.5" opacity=".5" style="fill:var(--n)"/>
+        <rect x="242" y="186" width="44" height="1.5" opacity=".5" style="fill:var(--n)"/>
+        <text x="180" y="191" text-anchor="middle" font-family="Inter" font-weight="600" font-size="10" letter-spacing="4" style="fill:var(--n)">PRIVATE LIMITED</text>
+      </symbol>
+
+      <!-- Option 6: headset "o". The ring (0–100) matches Poppins Bold's x-height and stroke;
+           the wordmark itself is HTML text -->
+      <symbol id="o6-o" viewBox="-14 0 128 122">
+        <circle cx="50" cy="50" r="39.5" fill="none" stroke-width="21" style="stroke:var(--g)"/>
+        <rect x="-14" y="32" width="16" height="36" rx="8" style="fill:var(--n)"/>
+        <rect x="98" y="32" width="16" height="36" rx="8" style="fill:var(--n)"/>
+        <path d="M106 68C106 92 96 110 76 112" fill="none" stroke-width="6" stroke-linecap="round" style="stroke:var(--n)"/>
+        <circle cx="70" cy="112" r="7" style="fill:var(--n)"/>
+      </symbol>
+      <symbol id="o6-icon" viewBox="-24 -13 148 148">
+        <use href="#o6-o" x="-14" width="128" height="122"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <header class="top wrap">
+    <span class="pill">Draft concepts · Round 1</span>
+    <h1>Logo options for Stallion Connect</h1>
+    <p>Six new directions for the logo, all based on the current one. Have a look, pick a favourite (or two), and tell us what you would change. Nothing here is final.</p>
+  </header>
+
+  <main class="wrap">
+    <section class="current" aria-labelledby="current-title">
+      <img src="assets/img/logo.png" alt="Current Stallion Connect logo" width="490" height="150">
+      <div>
+        <p class="label">Current logo</p>
+        <h2 id="current-title">What we kept from it</h2>
+        <ul class="kept">
+          <li>The navy and green brand colours</li>
+          <li>The "S" and "C" initials</li>
+          <li>The headset, for calls and customer support</li>
+        </ul>
+      </div>
+    </section>
+
+    <h2 class="section-title">The six options</h2>
+    <div class="options">
+
+      <!-- Option 1 -->
+      <article class="option" id="option-1">
+        <div class="option-head"><span class="num">Option 1</span><h2>Refined Monogram</h2></div>
+        <div class="stage main light"><svg viewBox="0 0 400 120" role="img" aria-label="Option 1 logo"><use href="#o1-logo" width="400" height="120"/></svg></div>
+        <div class="variants">
+          <div class="stage dark"><svg viewBox="0 0 400 120" aria-hidden="true"><use href="#o1-logo" width="400" height="120"/></svg></div>
+          <div class="icons light">
+            <div class="icon-demo"><div class="tile app"><svg viewBox="0 0 120 120"><use href="#o1-icon" width="120" height="120"/></svg></div>App</div>
+            <div class="icon-demo"><div class="tile dp"><svg viewBox="0 0 120 120"><use href="#o1-icon" width="120" height="120"/></svg></div>Profile</div>
+            <div class="icon-demo"><div class="tile fav"><svg viewBox="0 0 120 120"><use href="#o1-icon" width="120" height="120"/></svg></div>Tab</div>
+          </div>
+        </div>
+        <div class="desc">
+          <p>The current headset-and-initials idea, redrawn with cleaner shapes and a modern font. The safest choice: anyone who knows the old logo will still recognise it.</p>
+          <ul class="tags"><li>Closest to current</li><li>Classic</li><li>Font: Montserrat</li></ul>
+        </div>
+      </article>
+
+      <!-- Option 2 -->
+      <article class="option" id="option-2">
+        <div class="option-head"><span class="num">Option 2</span><h2>Two-Way S</h2></div>
+        <div class="stage main light"><svg viewBox="0 0 470 120" role="img" aria-label="Option 2 logo"><use href="#o2-logo" width="470" height="120"/></svg></div>
+        <div class="variants">
+          <div class="stage dark"><svg viewBox="0 0 470 120" aria-hidden="true"><use href="#o2-logo" width="470" height="120"/></svg></div>
+          <div class="icons light">
+            <div class="icon-demo"><div class="tile app"><svg viewBox="0 0 120 120"><use href="#o2-icon" width="120" height="120"/></svg></div>App</div>
+            <div class="icon-demo"><div class="tile dp"><svg viewBox="0 0 120 120"><use href="#o2-icon" width="120" height="120"/></svg></div>Profile</div>
+            <div class="icon-demo"><div class="tile fav"><svg viewBox="0 0 120 120"><use href="#o2-icon" width="120" height="120"/></svg></div>Tab</div>
+          </div>
+        </div>
+        <div class="desc">
+          <p>An "S" made of two arrows, one going out and one coming in, for outbound and inbound calls. Bold, simple and easy to remember.</p>
+          <ul class="tags"><li>Bold &amp; simple</li><li>Works well small</li><li>Font: Sora</li></ul>
+        </div>
+      </article>
+
+      <!-- Option 3 -->
+      <article class="option" id="option-3">
+        <div class="option-head"><span class="num">Option 3</span><h2>Conversation</h2></div>
+        <div class="stage main light"><svg viewBox="0 0 320 120" role="img" aria-label="Option 3 logo"><use href="#o3-logo" width="320" height="120"/></svg></div>
+        <div class="variants">
+          <div class="stage dark"><svg viewBox="0 0 320 120" aria-hidden="true"><use href="#o3-logo" width="320" height="120"/></svg></div>
+          <div class="icons light">
+            <div class="icon-demo"><div class="tile app"><svg viewBox="0 0 120 120"><use href="#o3-icon" width="120" height="120"/></svg></div>App</div>
+            <div class="icon-demo"><div class="tile dp"><svg viewBox="0 0 120 120"><use href="#o3-icon" width="120" height="120"/></svg></div>Profile</div>
+            <div class="icon-demo"><div class="tile fav"><svg viewBox="0 0 120 120"><use href="#o3-icon" width="120" height="120"/></svg></div>Tab</div>
+          </div>
+        </div>
+        <div class="desc">
+          <p>Two overlapping speech bubbles carrying the S and C: a conversation and a connection. Friendly, and it says "customer support" at a glance.</p>
+          <ul class="tags"><li>Friendly</li><li>Support-focused</li><li>Font: Outfit</li></ul>
+        </div>
+      </article>
+
+      <!-- Option 4 -->
+      <article class="option" id="option-4">
+        <div class="option-head"><span class="num">Option 4</span><h2>The Stallion</h2></div>
+        <div class="stage main light"><svg viewBox="0 0 350 120" role="img" aria-label="Option 4 logo"><use href="#o4-logo" width="350" height="120"/></svg></div>
+        <div class="variants">
+          <div class="stage dark"><svg viewBox="0 0 350 120" aria-hidden="true"><use href="#o4-logo" width="350" height="120"/></svg></div>
+          <div class="icons light">
+            <div class="icon-demo"><div class="tile app"><svg viewBox="0 0 120 120"><use href="#o4-icon" width="120" height="120"/></svg></div>App</div>
+            <div class="icon-demo"><div class="tile dp"><svg viewBox="0 0 120 120"><use href="#o4-icon" width="120" height="120"/></svg></div>Profile</div>
+            <div class="icon-demo"><div class="tile fav"><svg viewBox="0 0 120 120"><use href="#o4-icon" width="120" height="120"/></svg></div>Tab</div>
+          </div>
+        </div>
+        <div class="desc">
+          <p>A stallion wearing a headset: the company name told in one picture. The most memorable option, and it can double as a mascot.</p>
+          <ul class="tags"><li>Memorable</li><li>Strong personality</li><li>Font: Oswald</li></ul>
+        </div>
+      </article>
+
+      <!-- Option 5 -->
+      <article class="option" id="option-5">
+        <div class="option-head"><span class="num">Option 5</span><h2>Trust Shield</h2></div>
+        <div class="stage main light"><svg class="tall" viewBox="0 0 360 214" role="img" aria-label="Option 5 logo"><use href="#o5-logo" width="360" height="214"/></svg></div>
+        <div class="variants">
+          <div class="stage dark"><svg class="tall" viewBox="0 0 360 214" aria-hidden="true"><use href="#o5-logo" width="360" height="214"/></svg></div>
+          <div class="icons light">
+            <div class="icon-demo"><div class="tile app"><svg viewBox="0 0 120 120"><use href="#o5-icon" width="120" height="120"/></svg></div>App</div>
+            <div class="icon-demo"><div class="tile dp"><svg viewBox="0 0 120 120"><use href="#o5-icon" width="120" height="120"/></svg></div>Profile</div>
+            <div class="icon-demo"><div class="tile fav"><svg viewBox="0 0 120 120"><use href="#o5-icon" width="120" height="120"/></svg></div>Tab</div>
+          </div>
+        </div>
+        <div class="desc">
+          <p>A shield with serif initials, signalling trust and security. Well suited to banking and financial clients, and it keeps the serif style of the current logo.</p>
+          <ul class="tags"><li>Trustworthy</li><li>Corporate</li><li>Font: DM Serif Display</li></ul>
+        </div>
+      </article>
+
+      <!-- Option 6 -->
+      <article class="option" id="option-6">
+        <div class="option-head"><span class="num">Option 6</span><h2>Headset Wordmark</h2></div>
+        <div class="stage main light">
+          <div class="wm6" role="img" aria-label="Option 6 logo: stallion connect"><span class="n">stallion</span>&nbsp;<span class="g">c</span><svg class="o" viewBox="-14 0 128 122" aria-hidden="true"><use href="#o6-o" x="-14" width="128" height="122"/></svg><span class="g">nnect</span></div>
+        </div>
+        <div class="variants">
+          <div class="stage dark">
+            <div class="wm6" aria-hidden="true"><span class="n">stallion</span>&nbsp;<span class="g">c</span><svg class="o" viewBox="-14 0 128 122"><use href="#o6-o" x="-14" width="128" height="122"/></svg><span class="g">nnect</span></div>
+          </div>
+          <div class="icons light">
+            <div class="icon-demo"><div class="tile app"><svg viewBox="0 0 120 120"><use href="#o6-icon" width="120" height="120"/></svg></div>App</div>
+            <div class="icon-demo"><div class="tile dp"><svg viewBox="0 0 120 120"><use href="#o6-icon" width="120" height="120"/></svg></div>Profile</div>
+            <div class="icon-demo"><div class="tile fav"><svg viewBox="0 0 120 120"><use href="#o6-icon" width="120" height="120"/></svg></div>Tab</div>
+          </div>
+        </div>
+        <div class="desc">
+          <p>A clean text logo where the "o" in connect becomes a headset. Modern and digital-first; it looks sharp on the website and social media.</p>
+          <ul class="tags"><li>Modern</li><li>Text-led</li><li>Font: Poppins</li></ul>
+        </div>
+      </article>
+    </div>
+
+    <section class="compare" aria-labelledby="compare-title">
+      <h2 id="compare-title">All six icons side by side</h2>
+      <p>How each option looks as a WhatsApp or social media profile picture.</p>
+      <div class="dp-row light">
+        <figure><div class="tile dp"><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#o1-icon" width="120" height="120"/></svg></div><figcaption>Option 1</figcaption></figure>
+        <figure><div class="tile dp"><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#o2-icon" width="120" height="120"/></svg></div><figcaption>Option 2</figcaption></figure>
+        <figure><div class="tile dp"><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#o3-icon" width="120" height="120"/></svg></div><figcaption>Option 3</figcaption></figure>
+        <figure><div class="tile dp"><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#o4-icon" width="120" height="120"/></svg></div><figcaption>Option 4</figcaption></figure>
+        <figure><div class="tile dp"><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#o5-icon" width="120" height="120"/></svg></div><figcaption>Option 5</figcaption></figure>
+        <figure><div class="tile dp"><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#o6-icon" width="120" height="120"/></svg></div><figcaption>Option 6</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="feedback" aria-labelledby="feedback-title">
+      <h2 id="feedback-title">How to reply</h2>
+      <p>Just send us a message with your answers to these:</p>
+      <ol>
+        <li>Which option do you like most?<span>A first and second choice is even better, for example "Option 3, then Option 1".</span></li>
+        <li>What would you change?<span>Colours, font, icon, spacing: anything that doesn't feel right.</span></li>
+        <li>Should "Pvt Ltd" appear in the logo?<span>Or only on letterheads and documents.</span></li>
+        <li>Would you like to combine options?<span>For example the icon from one option with the text style of another.</span></li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    Concept sketches for discussion, prepared for Stallion Connect Pvt Ltd · Round 1 · 31 October 2026.<br>
+    Final files (SVG, PNG and PDF) will be prepared for the chosen design.
+  </footer>
+</body>
+</html>
