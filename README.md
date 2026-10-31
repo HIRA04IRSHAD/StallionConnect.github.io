@@ -33,4 +33,4 @@ then visit http://localhost:5500.
 
 - **Forms** run in demo mode and send nothing. Set `FORM_ENDPOINT` in `assets/js/main.js` (for example a Formspree form URL) to receive enquiries and job applications by email.
 - **Placeholders** are marked `TODO` in the HTML: office address, phone number, working hours, social media links, the "24×7" figure, careers perks and job openings.
-- **Logo** is a demo version. Replace the files in `assets/img/` when the final logo is ready.
+- **Logo**: `assets/img/` holds the final logo with the tagline "Where every connection counts": colour and white full lockups (`logo.png`, `logo-white.png`), compact versions without the tagline for the header (`logo-compact*.png`), and the icon alone (`logo-mark*.png`).

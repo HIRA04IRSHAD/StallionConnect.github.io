@@ -456,7 +456,7 @@ main { display: block; width: 100%; overflow-x: clip; padding: .5rem; }
 @media (min-width: 640px) { .f-cols { grid-template-columns: 1fr 1fr; } }
 @media (min-width: 1024px) { .f-cols { grid-template-columns: 1.4fr 1fr 1.2fr 1fr; } }
 .f-brand { max-width: 20rem; }
-.f-brand img { height: 3rem; width: auto; }
+.f-brand img { height: 4.75rem; width: auto; }
 .f-blurb { font-size: .875rem; color: rgba(255, 255, 255, .65); margin-top: 1rem; }
 .f-brand address { font-style: normal; margin-top: 1.5rem; color: rgba(255, 255, 255, .8); font-size: .875rem; display: flex; flex-direction: column; gap: .25rem; }
 .f-brand address a:hover { color: #fff; }
@@ -512,7 +512,7 @@ main { display: block; width: 100%; overflow-x: clip; padding: .5rem; }
 /* ---------- loader (home) ---------- */
 .loader { position: fixed; inset: 0; z-index: 200; background: var(--brand-deep); color: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2rem; will-change: transform; }
 .loader-mark { opacity: 0; }
-.loader-mark img { height: 4rem; width: auto; }
+.loader-mark img { height: 6.5rem; width: auto; max-width: 80vw; object-fit: contain; }
 .loader-track { width: 10rem; height: 1px; border-radius: var(--radius-pill); background: rgba(255, 255, 255, .2); overflow: hidden; }
 .loader-fill { height: 100%; background: #fff; transform: scaleX(0); transform-origin: left; transition: transform 1280ms var(--inout) 120ms; }
 .loader-fill.go { transform: scaleX(1); }
