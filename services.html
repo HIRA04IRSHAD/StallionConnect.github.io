@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Services | Stallion Connect Pvt Ltd</title>
-  <meta name="description" content="Call centre operations, banking and financial services outsourcing, inbound and outbound sales, BPO and ITES, customer support, lead generation, recruitment, training and back-office services.">
-  <meta name="theme-color" content="#01337a">
+  <meta name="description" content="Call centre operations, banking and financial services outsourcing, inbound and outbound sales, BPO and ITES, customer support, lead generation, recruitment and back-office services.">
+  <meta name="theme-color" content="#0f2f63">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Stallion Connect Pvt Ltd">
   <meta property="og:title" content="Services | Stallion Connect Pvt Ltd">
-  <meta property="og:description" content="Seven core service lines covering every stage of the customer journey.">
+  <meta property="og:description" content="Call centre operations, banking and financial services outsourcing, inbound and outbound sales, BPO and ITES, customer support, lead generation, recruitment and back-office services.">
   <!-- og:image must be a full URL on the live domain -->
   <meta property="og:image" content="https://connectstallion.github.io/assets/img/og-image.jpg">
   <link rel="icon" href="favicon.ico" sizes="any">
@@ -17,384 +17,290 @@
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap">
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500&amp;display=swap">
   <link rel="stylesheet" href="assets/css/styles.css">
-  <script>document.documentElement.classList.add('js');</script>
-  <script src="assets/js/main.js" defer></script>
+  <script>document.documentElement.classList.remove('no-js');</script>
+  <script type="importmap">{ "imports": { "lenis": "https://cdn.jsdelivr.net/npm/lenis@1.1.18/+esm" } }</script>
+  <script type="module" src="assets/js/main.js"></script>
 </head>
-<body>
+<body id="top">
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">
-        <img src="assets/img/logo.png" alt="Stallion Connect Pvt Ltd" width="490" height="150">
-      </a>
-      <nav class="site-nav" id="site-nav" aria-label="Main">
-        <ul class="nav-list">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html" aria-current="page">Services</a></li>
-          <li><a href="industries.html">Industries</a></li>
-          <li><a href="careers.html">Careers</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <a class="btn btn-primary btn-sm nav-cta" href="contact.html">Get a Quote</a>
-      </nav>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </header>
-
   <main id="main">
-    <section class="page-hero">
-      <div class="container">
-        <nav class="breadcrumb" aria-label="Breadcrumb">
-          <a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">Services</span>
-        </nav>
-        <h1>Our Services</h1>
-        <p class="lead">Seven core service lines covering every stage of the customer journey, from first contact and sales to support and back-office processing.</p>
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="plate"><div class="plate-inner" data-parallax="0,12">
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1920&q=70" alt="" fetchpriority="high">
+      </div></div>
+      
+    <header class="site-header">
+      <nav class="nav-left" aria-label="Main"><a href="about.html">About Us</a><a href="services.html" aria-current="page">Services</a><a href="industries.html">Industries</a><a href="careers.html">Careers</a></nav>
+      <a class="brand" href="index.html" aria-label="Stallion Connect home">
+        <img src="assets/img/logo-white.png" alt="Stallion Connect Pvt Ltd" width="490" height="150">
+      </a>
+      <div class="header-right">
+        <a class="book-link" href="contact.html" data-open-modal>Get a Quote</a>
+        <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span><i></i><i></i></span></button>
+      </div>
+    </header>
+      <div class="page-hero-body">
+        <span class="eyebrow light"><a href="index.html">Home</a>&nbsp;/&nbsp;<span aria-current="page">Services</span></span>
+        <h1 class="page-title sl" id="page-title" data-gate data-stagger="110" data-dur="1000"><span class="ln"><span>Our</span></span><span class="ln"><span>Services</span></span></h1>
+        <div class="page-hero-foot">
+          <p class="lead fade-words">Seven core service lines covering every stage of the customer journey, from first contact and sales to support and back-office processing.</p>
+          <a class="pill pill-light" href="contact.html" data-open-modal>Get a Quote <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
       </div>
     </section>
 
     <nav class="subnav" aria-label="Services on this page">
-      <div class="container subnav-track">
-        <a href="#call-centre">Call Centre</a>
-        <a href="#banking">Banking &amp; Finance</a>
-        <a href="#sales">Sales</a>
-        <a href="#bpo-ites">BPO &amp; ITES</a>
-        <a href="#support-leads">Support &amp; Leads</a>
-        <a href="#recruitment">Recruitment &amp; Training</a>
-        <a href="#back-office">Back-Office</a>
-      </div>
+      <div class="subnav-track"><a href="#call-centre">Call Centre</a><a href="#banking">Banking &amp; Finance</a><a href="#sales">Sales</a><a href="#bpo-ites">BPO &amp; ITES</a><a href="#support-leads">Support &amp; Leads</a><a href="#recruitment">Recruitment &amp; Training</a><a href="#back-office">Back-Office</a></div>
     </nav>
 
-    <!-- 01 Call centre -->
-    <section class="service-detail" id="call-centre">
-      <div class="container service-detail-grid">
-        <div class="reveal">
-          <div class="service-head">
-            <span class="icon-badge lg"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z"/><path d="M21 16v2a4 4 0 0 1-4 4h-5"/></svg></span>
-            <span class="service-num">01 / 07</span>
-          </div>
-          <h2>Domestic &amp; International Call Centre Operations</h2>
-          <p class="lead">Professionally managed voice operations for customers across India and overseas markets, with trained agents, quality monitoring and flexible shift coverage.</p>
-          <ul class="check-list cols-2">
-            <li>Inbound customer care &amp; helpdesk</li>
-            <li>Outbound calling campaigns</li>
-            <li>Multilingual support in English, Hindi &amp; regional languages</li>
-            <li>International voice processes for US, UK &amp; Australian time zones</li>
-            <li>Call quality monitoring &amp; audits</li>
-            <li>Escalation &amp; complaint management</li>
-          </ul>
+    <section class="sec svc" id="call-centre" aria-labelledby="call-centre-title">
+      <div class="svc-grid">
+        <div>
+          <div class="svc-num"><span class="icon-circle"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z"/><path d="M21 16v2a4 4 0 0 1-4 4h-5"/></svg></span>01 / 07</div>
+          <h2 class="h-xl sl" id="call-centre-title" style="margin-top:1.75rem"><span class="ln"><span>Domestic &amp;</span></span><span class="ln"><span>International</span></span><span class="ln"><span>Call Centre</span></span></h2>
+          <p class="lead fade-words">Professionally managed voice operations for customers across India and overseas markets, with trained agents, quality monitoring and flexible shift coverage.</p>
+          <ul class="check-list cols-2"><li>Inbound customer care &amp; helpdesk</li><li>Outbound calling campaigns</li><li>Multilingual support in English, Hindi &amp; regional languages</li><li>International voice processes for US, UK &amp; Australian time zones</li><li>Call quality monitoring &amp; audits</li><li>Escalation &amp; complaint management</li></ul>
         </div>
-        <aside class="service-aside reveal" style="--d:1">
-          <p class="aside-label">Ideal for</p>
-          <p>Banks, telecom, e-commerce, travel and any business with high call volumes.</p>
-          <p class="aside-label">What you get</p>
-          <ul class="mini-list">
-            <li>Dedicated or shared agent teams</li>
-            <li>Flexible shifts across time zones</li>
-            <li>Daily and monthly MIS reports</li>
-          </ul>
-          <a class="btn btn-primary btn-sm" href="contact.html?service=call-centre">Enquire about this service</a>
+        <aside data-iv="{&quot;f&quot;:{&quot;opacity&quot;:0,&quot;y&quot;:40},&quot;c&quot;:[180,26],&quot;d&quot;:120}">
+          <div class="svc-img" data-zoom><img src="https://images.unsplash.com/photo-1626863905121-3b0c0ed7b94c?auto=format&fit=crop&w=900&q=70" alt="" loading="lazy"></div>
+          <div class="aside-card">
+            <p class="aside-label">Ideal for</p>
+            <p>Banks, telecom, e-commerce, travel and any business with high call volumes.</p>
+            <p class="aside-label">What you get</p>
+            <ul class="mini-list"><li>Dedicated or shared agent teams</li><li>Flexible shifts across time zones</li><li>Daily and monthly MIS reports</li></ul>
+            <a class="pill pill-solid pill-sm" href="contact.html?service=call-centre">Enquire about this service <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+    <section class="sec svc sec-surface sec-round" id="banking" aria-labelledby="banking-title">
+      <div class="svc-grid">
+        <div>
+          <div class="svc-num"><span class="icon-circle"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 22h18"/><path d="M6 18v-7"/><path d="M10 18v-7"/><path d="M14 18v-7"/><path d="M18 18v-7"/><path d="M12 2 20 7H4z"/></svg></span>02 / 07</div>
+          <h2 class="h-xl sl" id="banking-title" style="margin-top:1.75rem"><span class="ln"><span>Banking &amp;</span></span><span class="ln"><span>Financial Services</span></span></h2>
+          <p class="lead fade-words">Specialised teams for banks, NBFCs, fintechs and insurers, handling sales, service and verification with the care financial customers expect.</p>
+          <ul class="check-list cols-2"><li>Credit card &amp; personal loan sales</li><li>Customer onboarding &amp; KYC verification</li><li>Account and card servicing support</li><li>Collections &amp; payment reminder calls</li><li>Insurance tele-sales &amp; renewals</li><li>Document collection &amp; verification</li></ul>
+        </div>
+        <aside data-iv="{&quot;f&quot;:{&quot;opacity&quot;:0,&quot;y&quot;:40},&quot;c&quot;:[180,26],&quot;d&quot;:120}">
+          <div class="svc-img" data-zoom><img src="https://images.unsplash.com/photo-1556745753-b2904692b3cd?auto=format&fit=crop&w=900&q=70" alt="" loading="lazy"></div>
+          <div class="aside-card">
+            <p class="aside-label">Ideal for</p>
+            <p>Banks, NBFCs, fintechs, insurers and payment companies.</p>
+            <p class="aside-label">What you get</p>
+            <ul class="mini-list"><li>Process-trained BFSI agents</li><li>Compliance-first scripts and checks</li><li>Conversion and quality tracking</li></ul>
+            <a class="pill pill-solid pill-sm" href="contact.html?service=banking">Enquire about this service <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+    <section class="sec svc" id="sales" aria-labelledby="sales-title">
+      <div class="svc-grid">
+        <div>
+          <div class="svc-num"><span class="icon-circle"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m22 7-8.5 8.5-5-5L2 17"/><path d="M16 7h6v6"/></svg></span>03 / 07</div>
+          <h2 class="h-xl sl" id="sales-title" style="margin-top:1.75rem"><span class="ln"><span>Inbound &amp;</span></span><span class="ln"><span>Outbound Sales</span></span></h2>
+          <p class="lead fade-words">Revenue-focused teams that convert enquiries into customers and reach new prospects with well-scripted, compliant outreach.</p>
+          <ul class="check-list cols-2"><li>Inbound sales &amp; order taking</li><li>Outbound telesales campaigns</li><li>Cross-sell &amp; up-sell to existing customers</li><li>Appointment setting &amp; demo booking</li><li>Renewals &amp; customer win-back</li><li>Sales funnel &amp; conversion reporting</li></ul>
+        </div>
+        <aside data-iv="{&quot;f&quot;:{&quot;opacity&quot;:0,&quot;y&quot;:40},&quot;c&quot;:[180,26],&quot;d&quot;:120}">
+          <div class="svc-img" data-zoom><img src="https://images.unsplash.com/photo-1758873272222-ccd8c4296864?auto=format&fit=crop&w=900&q=70" alt="" loading="lazy"></div>
+          <div class="aside-card">
+            <p class="aside-label">Ideal for</p>
+            <p>Businesses that want more conversions from enquiries, campaigns and existing customers.</p>
+            <p class="aside-label">What you get</p>
+            <ul class="mini-list"><li>Target-driven sales teams</li><li>Script and pitch refinement</li><li>Lead-to-sale funnel reporting</li></ul>
+            <a class="pill pill-solid pill-sm" href="contact.html?service=sales">Enquire about this service <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+    <section class="sec svc sec-surface sec-round" id="bpo-ites" aria-labelledby="bpo-ites-title">
+      <div class="svc-grid">
+        <div>
+          <div class="svc-num"><span class="icon-circle"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg></span>04 / 07</div>
+          <h2 class="h-xl sl" id="bpo-ites-title" style="margin-top:1.75rem"><span class="ln"><span>BPO &amp; ITES</span></span><span class="ln"><span>Operations</span></span></h2>
+          <p class="lead fade-words">End-to-end business process and IT-enabled services that help you run leaner, faster operations.</p>
+          <ul class="check-list cols-2"><li>Email &amp; chat support</li><li>L1 technical helpdesk</li><li>Data processing &amp; management</li><li>Order &amp; transaction processing</li><li>Content review &amp; moderation</li><li>SOP documentation &amp; process improvement</li></ul>
+        </div>
+        <aside data-iv="{&quot;f&quot;:{&quot;opacity&quot;:0,&quot;y&quot;:40},&quot;c&quot;:[180,26],&quot;d&quot;:120}">
+          <div class="svc-img" data-zoom><img src="https://images.unsplash.com/photo-1714079761488-e0c9b9ac4138?auto=format&fit=crop&w=900&q=70" alt="" loading="lazy"></div>
+          <div class="aside-card">
+            <p class="aside-label">Ideal for</p>
+            <p>Companies that want to offload repeatable processes and scale without hiring in-house.</p>
+            <p class="aside-label">What you get</p>
+            <ul class="mini-list"><li>SOP-driven delivery</li><li>Accuracy and turnaround SLAs</li><li>Teams that scale with your volumes</li></ul>
+            <a class="pill pill-solid pill-sm" href="contact.html?service=bpo-ites">Enquire about this service <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+    <section class="sec svc" id="support-leads" aria-labelledby="support-leads-title">
+      <div class="svc-grid">
+        <div>
+          <div class="svc-num"><span class="icon-circle"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></span>05 / 07</div>
+          <h2 class="h-xl sl" id="support-leads-title" style="margin-top:1.75rem"><span class="ln"><span>Customer Support</span></span><span class="ln"><span>&amp; Lead Generation</span></span></h2>
+          <p class="lead fade-words">Keep customers happy and your pipeline full, with omnichannel support paired with targeted lead generation.</p>
+          <ul class="check-list cols-2"><li>Support across voice, email, chat &amp; social</li><li>Ticket management &amp; resolution</li><li>Customer feedback &amp; satisfaction surveys</li><li>B2B &amp; B2C lead generation</li><li>Lead qualification &amp; nurturing</li><li>Database building &amp; enrichment</li></ul>
+        </div>
+        <aside data-iv="{&quot;f&quot;:{&quot;opacity&quot;:0,&quot;y&quot;:40},&quot;c&quot;:[180,26],&quot;d&quot;:120}">
+          <div class="svc-img" data-zoom><img src="https://images.unsplash.com/photo-1758876018582-e7573baf5306?auto=format&fit=crop&w=900&q=70" alt="" loading="lazy"></div>
+          <div class="aside-card">
+            <p class="aside-label">Ideal for</p>
+            <p>Brands that need responsive customer care and a steady flow of qualified leads.</p>
+            <p class="aside-label">What you get</p>
+            <ul class="mini-list"><li>Omnichannel coverage</li><li>CSAT and resolution tracking</li><li>Qualified, sales-ready leads</li></ul>
+            <a class="pill pill-solid pill-sm" href="contact.html?service=support-leads">Enquire about this service <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+    <section class="sec svc sec-surface sec-round" id="recruitment" aria-labelledby="recruitment-title">
+      <div class="svc-grid">
+        <div>
+          <div class="svc-num"><span class="icon-circle"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6"/><path d="M22 11h-6"/></svg></span>06 / 07</div>
+          <h2 class="h-xl sl" id="recruitment-title" style="margin-top:1.75rem"><span class="ln"><span>Recruitment</span></span><span class="ln"><span>&amp; Training</span></span></h2>
+          <p class="lead fade-words">We source, assess and train talent for our own floors and for clients who need ready-to-work teams.</p>
+          <ul class="check-list cols-2"><li>Volume hiring for customer-facing roles</li><li>Screening, assessments &amp; interviews</li><li>Induction &amp; process training</li><li>Communication, soft skills &amp; voice training</li><li>Product &amp; compliance training</li><li>Ongoing coaching &amp; refresher programmes</li></ul>
+        </div>
+        <aside data-iv="{&quot;f&quot;:{&quot;opacity&quot;:0,&quot;y&quot;:40},&quot;c&quot;:[180,26],&quot;d&quot;:120}">
+          <div class="svc-img" data-zoom><img src="https://images.unsplash.com/photo-1758873268695-1b55590e507a?auto=format&fit=crop&w=900&q=70" alt="" loading="lazy"></div>
+          <div class="aside-card">
+            <p class="aside-label">Ideal for</p>
+            <p>Businesses scaling customer-facing teams quickly, in-house or outsourced.</p>
+            <p class="aside-label">What you get</p>
+            <ul class="mini-list"><li>Faster hiring for volume roles</li><li>A structured training curriculum</li><li>Assessed, job-ready candidates</li></ul>
+            <a class="pill pill-solid pill-sm" href="contact.html?service=recruitment">Enquire about this service <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </aside>
+      </div>
+    </section>
+    <section class="sec svc" id="back-office" aria-labelledby="back-office-title">
+      <div class="svc-grid">
+        <div>
+          <div class="svc-num"><span class="icon-circle"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></span>07 / 07</div>
+          <h2 class="h-xl sl" id="back-office-title" style="margin-top:1.75rem"><span class="ln"><span>Back-Office &amp;</span></span><span class="ln"><span>Administrative</span></span></h2>
+          <p class="lead fade-words">Accurate, secure handling of the everyday work that keeps your business running.</p>
+          <ul class="check-list cols-2"><li>Data entry &amp; digitisation</li><li>Document processing &amp; indexing</li><li>Verification &amp; validation checks</li><li>Records &amp; database management</li><li>Billing, invoicing &amp; reconciliation support</li><li>MIS reporting &amp; administrative support</li></ul>
+        </div>
+        <aside data-iv="{&quot;f&quot;:{&quot;opacity&quot;:0,&quot;y&quot;:40},&quot;c&quot;:[180,26],&quot;d&quot;:120}">
+          <div class="svc-img" data-zoom><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=70" alt="" loading="lazy"></div>
+          <div class="aside-card">
+            <p class="aside-label">Ideal for</p>
+            <p>Organisations that need reliable, accurate processing without growing headcount.</p>
+            <p class="aside-label">What you get</p>
+            <ul class="mini-list"><li>Accuracy-checked output</li><li>Secure data handling</li><li>Turnaround-time SLAs</li></ul>
+            <a class="pill pill-solid pill-sm" href="contact.html?service=back-office">Enquire about this service <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
         </aside>
       </div>
     </section>
 
-    <!-- 02 Banking & financial services -->
-    <section class="service-detail alt" id="banking">
-      <div class="container service-detail-grid">
-        <div class="reveal">
-          <div class="service-head">
-            <span class="icon-badge lg is-green"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 22h18"/><path d="M6 18v-7"/><path d="M10 18v-7"/><path d="M14 18v-7"/><path d="M18 18v-7"/><path d="M12 2 20 7H4z"/></svg></span>
-            <span class="service-num">02 / 07</span>
-          </div>
-          <h2>Banking &amp; Financial Services Outsourcing</h2>
-          <p class="lead">Specialised teams for banks, NBFCs, fintechs and insurers, handling sales, service and verification with the care financial customers expect.</p>
-          <ul class="check-list cols-2">
-            <li>Credit card &amp; personal loan sales</li>
-            <li>Customer onboarding &amp; KYC verification</li>
-            <li>Account and card servicing support</li>
-            <li>Collections &amp; payment reminder calls</li>
-            <li>Insurance tele-sales &amp; renewals</li>
-            <li>Document collection &amp; verification</li>
-          </ul>
+    <footer class="footer">
+      <div class="f-cta">
+        <div>
+          <span class="eyebrow light">Get started</span>
+          <p class="f-cta-t sl"><span class="ln"><span>Not sure</span></span><span class="ln"><span>where to start?</span></span></p>
         </div>
-        <aside class="service-aside reveal" style="--d:1">
-          <p class="aside-label">Ideal for</p>
-          <p>Banks, NBFCs, fintechs, insurers and payment companies.</p>
-          <p class="aside-label">What you get</p>
-          <ul class="mini-list">
-            <li>Process-trained BFSI agents</li>
-            <li>Compliance-first scripts and checks</li>
-            <li>Conversion and quality tracking</li>
-          </ul>
-          <a class="btn btn-primary btn-sm" href="contact.html?service=banking">Enquire about this service</a>
-        </aside>
-      </div>
-    </section>
-
-    <!-- 03 Sales -->
-    <section class="service-detail" id="sales">
-      <div class="container service-detail-grid">
-        <div class="reveal">
-          <div class="service-head">
-            <span class="icon-badge lg"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m22 7-8.5 8.5-5-5L2 17"/><path d="M16 7h6v6"/></svg></span>
-            <span class="service-num">03 / 07</span>
-          </div>
-          <h2>Inbound &amp; Outbound Sales</h2>
-          <p class="lead">Revenue-focused teams that convert enquiries into customers and reach new prospects with well-scripted, compliant outreach.</p>
-          <ul class="check-list cols-2">
-            <li>Inbound sales &amp; order taking</li>
-            <li>Outbound telesales campaigns</li>
-            <li>Cross-sell &amp; up-sell to existing customers</li>
-            <li>Appointment setting &amp; demo booking</li>
-            <li>Renewals &amp; customer win-back</li>
-            <li>Sales funnel &amp; conversion reporting</li>
-          </ul>
-        </div>
-        <aside class="service-aside reveal" style="--d:1">
-          <p class="aside-label">Ideal for</p>
-          <p>Businesses that want more conversions from enquiries, campaigns and existing customers.</p>
-          <p class="aside-label">What you get</p>
-          <ul class="mini-list">
-            <li>Target-driven sales teams</li>
-            <li>Script and pitch refinement</li>
-            <li>Lead-to-sale funnel reporting</li>
-          </ul>
-          <a class="btn btn-primary btn-sm" href="contact.html?service=sales">Enquire about this service</a>
-        </aside>
-      </div>
-    </section>
-
-    <!-- 04 BPO & ITES -->
-    <section class="service-detail alt" id="bpo-ites">
-      <div class="container service-detail-grid">
-        <div class="reveal">
-          <div class="service-head">
-            <span class="icon-badge lg is-green"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg></span>
-            <span class="service-num">04 / 07</span>
-          </div>
-          <h2>BPO &amp; ITES Operations</h2>
-          <p class="lead">End-to-end business process and IT-enabled services that help you run leaner, faster operations.</p>
-          <ul class="check-list cols-2">
-            <li>Email &amp; chat support</li>
-            <li>L1 technical helpdesk</li>
-            <li>Data processing &amp; management</li>
-            <li>Order &amp; transaction processing</li>
-            <li>Content review &amp; moderation</li>
-            <li>SOP documentation &amp; process improvement</li>
-          </ul>
-        </div>
-        <aside class="service-aside reveal" style="--d:1">
-          <p class="aside-label">Ideal for</p>
-          <p>Companies that want to offload repeatable processes and scale without hiring in-house.</p>
-          <p class="aside-label">What you get</p>
-          <ul class="mini-list">
-            <li>SOP-driven delivery</li>
-            <li>Accuracy and turnaround SLAs</li>
-            <li>Teams that scale with your volumes</li>
-          </ul>
-          <a class="btn btn-primary btn-sm" href="contact.html?service=bpo-ites">Enquire about this service</a>
-        </aside>
-      </div>
-    </section>
-
-    <!-- 05 Support & lead generation -->
-    <section class="service-detail" id="support-leads">
-      <div class="container service-detail-grid">
-        <div class="reveal">
-          <div class="service-head">
-            <span class="icon-badge lg"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></span>
-            <span class="service-num">05 / 07</span>
-          </div>
-          <h2>Customer Support &amp; Lead Generation</h2>
-          <p class="lead">Keep customers happy and your pipeline full, with omnichannel support paired with targeted lead generation.</p>
-          <ul class="check-list cols-2">
-            <li>Support across voice, email, chat &amp; social</li>
-            <li>Ticket management &amp; resolution</li>
-            <li>Customer feedback &amp; satisfaction surveys</li>
-            <li>B2B &amp; B2C lead generation</li>
-            <li>Lead qualification &amp; nurturing</li>
-            <li>Database building &amp; enrichment</li>
-          </ul>
-        </div>
-        <aside class="service-aside reveal" style="--d:1">
-          <p class="aside-label">Ideal for</p>
-          <p>Brands that need responsive customer care and a steady flow of qualified leads.</p>
-          <p class="aside-label">What you get</p>
-          <ul class="mini-list">
-            <li>Omnichannel coverage</li>
-            <li>CSAT and resolution tracking</li>
-            <li>Qualified, sales-ready leads</li>
-          </ul>
-          <a class="btn btn-primary btn-sm" href="contact.html?service=support-leads">Enquire about this service</a>
-        </aside>
-      </div>
-    </section>
-
-    <!-- 06 Recruitment & training -->
-    <section class="service-detail alt" id="recruitment">
-      <div class="container service-detail-grid">
-        <div class="reveal">
-          <div class="service-head">
-            <span class="icon-badge lg is-green"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6"/><path d="M22 11h-6"/></svg></span>
-            <span class="service-num">06 / 07</span>
-          </div>
-          <h2>Recruitment &amp; Training</h2>
-          <p class="lead">We source, assess and train talent for our own floors and for clients who need ready-to-work teams.</p>
-          <ul class="check-list cols-2">
-            <li>Volume hiring for customer-facing roles</li>
-            <li>Screening, assessments &amp; interviews</li>
-            <li>Induction &amp; process training</li>
-            <li>Communication, soft skills &amp; voice training</li>
-            <li>Product &amp; compliance training</li>
-            <li>Ongoing coaching &amp; refresher programmes</li>
-          </ul>
-        </div>
-        <aside class="service-aside reveal" style="--d:1">
-          <p class="aside-label">Ideal for</p>
-          <p>Businesses scaling customer-facing teams quickly, in-house or outsourced.</p>
-          <p class="aside-label">What you get</p>
-          <ul class="mini-list">
-            <li>Faster hiring for volume roles</li>
-            <li>A structured training curriculum</li>
-            <li>Assessed, job-ready candidates</li>
-          </ul>
-          <a class="btn btn-primary btn-sm" href="contact.html?service=recruitment">Enquire about this service</a>
-        </aside>
-      </div>
-    </section>
-
-    <!-- 07 Back-office -->
-    <section class="service-detail" id="back-office">
-      <div class="container service-detail-grid">
-        <div class="reveal">
-          <div class="service-head">
-            <span class="icon-badge lg"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></span>
-            <span class="service-num">07 / 07</span>
-          </div>
-          <h2>Back-Office &amp; Administrative Services</h2>
-          <p class="lead">Accurate, secure handling of the everyday work that keeps your business running.</p>
-          <ul class="check-list cols-2">
-            <li>Data entry &amp; digitisation</li>
-            <li>Document processing &amp; indexing</li>
-            <li>Verification &amp; validation checks</li>
-            <li>Records &amp; database management</li>
-            <li>Billing, invoicing &amp; reconciliation support</li>
-            <li>MIS reporting &amp; administrative support</li>
-          </ul>
-        </div>
-        <aside class="service-aside reveal" style="--d:1">
-          <p class="aside-label">Ideal for</p>
-          <p>BFSI, healthcare, e-commerce and any business with document-heavy workflows.</p>
-          <p class="aside-label">What you get</p>
-          <ul class="mini-list">
-            <li>High-accuracy processing</li>
-            <li>Secure, confidential handling</li>
-            <li>Timely MIS and audit trails</li>
-          </ul>
-          <a class="btn btn-primary btn-sm" href="contact.html?service=back-office">Enquire about this service</a>
-        </aside>
-      </div>
-    </section>
-
-    <!-- Engagement models -->
-    <section class="section section-soft">
-      <div class="container">
-        <div class="section-head center reveal">
-          <span class="eyebrow">Engagement models</span>
-          <h2>Flexible ways to work with us</h2>
-          <p class="lead">Choose the model that fits your volumes, budget and level of control.</p>
-        </div>
-        <div class="grid grid-3">
-          <div class="card reveal">
-            <span class="icon-badge"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
-            <h3>Dedicated team</h3>
-            <p>A team that works only on your process, trained on your products, tools and brand voice.</p>
-          </div>
-          <div class="card reveal" style="--d:1">
-            <span class="icon-badge is-green"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg></span>
-            <h3>Shared team</h3>
-            <p>Cost-efficient agents shared across similar processes, ideal for lower or variable volumes.</p>
-          </div>
-          <div class="card reveal" style="--d:2">
-            <span class="icon-badge"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><path d="M4 22v-7"/></svg></span>
-            <h3>Pilot project</h3>
-            <p>Start small, measure the results, then scale up with confidence.</p>
-          </div>
+        <div data-iv="{&quot;f&quot;:{&quot;opacity&quot;:0,&quot;y&quot;:20},&quot;c&quot;:[200,24],&quot;d&quot;:150}">
+          <a class="pill pill-light" href="contact.html" data-open-modal>Talk to us <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div>
       </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="section">
-      <div class="container">
-        <div class="cta-band reveal">
-          <div>
-            <h2>Not sure which service you need?</h2>
-            <p>Tell us about your business and we'll recommend the right mix of services and team size.</p>
-          </div>
-          <div class="cta-actions">
-            <a class="btn btn-primary" href="contact.html">Talk to Us <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
-            <a class="btn btn-outline-light" href="tel:+910000000000">Call Us</a>
-          </div>
+      <div class="f-cols">
+        <div class="f-brand">
+          <img src="assets/img/logo-white.png" alt="Stallion Connect Pvt Ltd" width="490" height="150" loading="lazy">
+          <p class="f-blurb">Call centre, sales, customer support and back-office outsourcing for businesses across India and overseas.</p>
+          <!-- TODO: replace with the company's real address, phone and email -->
+          <address>
+            <a href="mailto:info@stallionconnect.in">info@stallionconnect.in</a>
+            <a href="tel:+910000000000">+91 00000 00000</a>
+            <span>Office address, City, State – PIN</span>
+          </address>
         </div>
+        <nav class="f-nav" aria-label="Company">
+          <h2>Company</h2>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="industries.html">Industries</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <nav class="f-nav" aria-label="Services">
+          <h2>Services</h2>
+          <ul>
+            <li><a href="services.html#call-centre">Call Centre Operations</a></li>
+            <li><a href="services.html#banking">Banking &amp; Financial Services</a></li>
+            <li><a href="services.html#sales">Inbound &amp; Outbound Sales</a></li>
+            <li><a href="services.html#bpo-ites">BPO &amp; ITES</a></li>
+            <li><a href="services.html#support-leads">Support &amp; Lead Generation</a></li>
+            <li><a href="services.html#recruitment">Recruitment &amp; Training</a></li>
+            <li><a href="services.html#back-office">Back-Office &amp; Admin</a></li>
+          </ul>
+        </nav>
+        <nav class="f-nav" aria-label="Social">
+          <h2>Follow</h2>
+          <!-- TODO: replace # with the company's social media profile links -->
+          <ul>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+          </ul>
+        </nav>
       </div>
-    </section>
+      <div class="f-bottom">
+        <p>© <span data-year>2026</span> Stallion Connect Pvt Ltd. All rights reserved.</p>
+        <nav aria-label="Footer"><a href="contact.html">Contact</a><a href="careers.html">Careers</a><a href="#top">Back to top ↑</a></nav>
+      </div>
+    </footer>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <img src="assets/img/logo-white.png" alt="Stallion Connect Pvt Ltd" width="490" height="150" loading="lazy">
-        <p>Call centre, sales, customer support and back-office outsourcing for businesses across India and overseas.</p>
-        <!-- TODO: replace # with the company's social media profile links -->
-        <div class="social">
-          <a href="#" aria-label="LinkedIn"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a>
-          <a href="#" aria-label="Facebook"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-          <a href="#" aria-label="Instagram"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><path d="M17.5 6.5h.01"/></svg></a>
+  <div class="overlay menu" id="menu" inert>
+    <div class="menu-back" id="menu-back"></div>
+    <div class="menu-panel" id="menu-panel" role="dialog" aria-modal="true" aria-label="Menu">
+      <div class="menu-top">
+        <img src="assets/img/logo-white.png" alt="Stallion Connect Pvt Ltd" width="490" height="150">
+        <button class="circle-btn x-btn" id="menu-close" type="button" aria-label="Close menu"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      </div>
+      <nav class="menu-nav" id="menu-nav" aria-label="Menu"><a href="index.html">Home</a><a href="about.html">About Us</a><a href="services.html" aria-current="page">Services</a><a href="industries.html">Industries</a><a href="careers.html">Careers</a><a href="contact.html">Contact</a></nav>
+      <div class="menu-bottom">
+        <button class="pill pill-light" id="menu-quote" type="button">Get a Quote <svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        <nav aria-label="Social"><a href="#">LinkedIn</a><a href="#">Facebook</a><a href="#">Instagram</a></nav>
+      </div>
+    </div>
+  </div>
+
+  <div class="overlay modal" id="modal" inert>
+    <div class="modal-back" id="modal-back"></div>
+    <div class="modal-panel" id="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title" data-lenis-prevent>
+      <div class="modal-head">
+        <div>
+          <span class="eyebrow">Get a quote</span>
+          <h2 class="modal-title" id="modal-title" data-stagger="90" data-dur="800"><span class="ln"><span>Let's build</span></span><span class="ln"><span>your team</span></span></h2>
         </div>
+        <button class="circle-btn x-btn" id="modal-close" type="button" aria-label="Close"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
       </div>
-      <div>
-        <h2 class="footer-title">Company</h2>
-        <ul class="footer-links">
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="industries.html">Industries</a></li>
-          <li><a href="careers.html">Careers</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h2 class="footer-title">Services</h2>
-        <ul class="footer-links">
-          <li><a href="services.html#call-centre">Call Centre Operations</a></li>
-          <li><a href="services.html#banking">Banking &amp; Financial Services</a></li>
-          <li><a href="services.html#sales">Inbound &amp; Outbound Sales</a></li>
-          <li><a href="services.html#bpo-ites">BPO &amp; ITES</a></li>
-          <li><a href="services.html#support-leads">Support &amp; Lead Generation</a></li>
-          <li><a href="services.html#recruitment">Recruitment &amp; Training</a></li>
-          <li><a href="services.html#back-office">Back-Office &amp; Admin</a></li>
-        </ul>
-      </div>
-      <div>
-        <h2 class="footer-title">Get in touch</h2>
-        <!-- TODO: replace with the company's real address, phone and email -->
-        <ul class="footer-contact">
-          <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span>Office address, City, State – PIN</span></li>
-          <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+910000000000">+91 00000 00000</a></li>
-          <li><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><a href="mailto:info@stallionconnect.in">info@stallionconnect.in</a></li>
-        </ul>
+      <form id="quote-form" data-form method="post">
+        <div class="form-grid">
+          <div class="field"><label for="q-name">Full name <span class="req">*</span></label><input id="q-name" name="name" type="text" autocomplete="name" placeholder="Priya Sharma" required></div>
+          <div class="field"><label for="q-company">Company</label><input id="q-company" name="company" type="text" autocomplete="organization" placeholder="Your company"></div>
+          <div class="field"><label for="q-email">Email <span class="req">*</span></label><input id="q-email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required></div>
+          <div class="field"><label for="q-phone">Phone <span class="req">*</span></label><input id="q-phone" name="phone" type="tel" autocomplete="tel" pattern="[0-9 +\-]{10,16}" title="Enter a valid phone number" placeholder="+91" required></div>
+          <div class="field full"><label for="q-message">What do you need?</label><textarea id="q-message" name="message" rows="3" placeholder="e.g. 20 agents for inbound customer care in Hindi and English"></textarea></div>
+        </div>
+        <input type="hidden" name="form" value="Quick quote">
+        <div class="form-actions"><button class="submit" type="submit">Request a quote</button></div>
+        <p class="form-status" role="status"></p>
+      </form>
+      <div class="success" id="quote-success" hidden>
+        <div class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l4 4L19 7"/></svg></div>
+        <h3>Request received</h3>
+        <p id="quote-success-text">Thanks — our team will be in touch shortly with next steps.</p>
+        <button class="submit" id="quote-done" type="button">Done</button>
       </div>
     </div>
-    <div class="footer-bottom">
-      <div class="container">
-        <p>© <span data-year>2026</span> Stallion Connect Pvt Ltd. All rights reserved.</p>
-        <a href="#top">Back to top ↑</a>
-      </div>
-    </div>
-  </footer>
+  </div>
 </body>
 </html>

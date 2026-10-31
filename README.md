@@ -17,6 +17,8 @@ Live site: https://connectstallion.github.io
 
 Styles live in `assets/css/styles.css`, scripts in `assets/js/main.js` and images in `assets/img/`. There is no build step: edit the files and push.
 
+The layout is rem-based and scales with the viewport (designed at 1920px wide). Smooth scrolling uses [Lenis](https://github.com/darkroomengineering/lenis), loaded from jsDelivr through the import map in each page's `<head>`. Photos are free Unsplash images linked from `images.unsplash.com`; swap them for the company's own photos when available.
+
 ## Run locally
 
 Open `index.html` in a browser, or serve the folder:
