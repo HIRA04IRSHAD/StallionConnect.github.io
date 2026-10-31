@@ -27,13 +27,8 @@
 <body id="top">
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <main id="main">
-    <section class="page-hero" aria-labelledby="page-title">
-      <div class="plate"><div class="plate-inner" data-parallax="0,12">
-        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1920&q=70" alt="" fetchpriority="high">
-      </div></div>
-      
-    <header class="site-header">
+  <header class="site-header" id="site-header">
+    <div class="hdr-bar">
       <nav class="nav-left" aria-label="Main"><a href="about.html">About Us</a><a href="services.html">Services</a><a href="industries.html" aria-current="page">Industries</a><a href="careers.html">Careers</a></nav>
       <a class="brand" href="index.html" aria-label="Stallion Connect home">
         <img src="assets/img/logo-white.png" alt="Stallion Connect Pvt Ltd" width="490" height="150">
@@ -42,7 +37,14 @@
         <a class="book-link" href="contact.html" data-open-modal>Get a Quote</a>
         <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span><i></i><i></i></span></button>
       </div>
-    </header>
+    </div>
+  </header>
+  <main id="main">
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="plate"><div class="plate-inner" data-parallax="0,12">
+        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1920&q=70" alt="" fetchpriority="high">
+      </div></div>
+      <div class="hdr-space" aria-hidden="true"></div>
       <div class="page-hero-body">
         <span class="eyebrow light"><a href="index.html">Home</a>&nbsp;/&nbsp;<span aria-current="page">Industries</span></span>
         <h1 class="page-title sl" id="page-title" data-gate data-stagger="110" data-dur="1000"><span class="ln"><span>Industries</span></span><span class="ln"><span>We Serve</span></span></h1>
@@ -63,7 +65,7 @@
       </div>
       <div class="grid grid-4 sec-body">
         <div data-iv="{&quot;f&quot;:{&quot;opacity&quot;:0,&quot;y&quot;:40},&quot;c&quot;:[180,26]}">
-          <article class="card" id="bfsi" data-lift style="scroll-margin-top:2rem">
+          <article class="card" id="bfsi" data-lift style="scroll-margin-top:6rem">
             <span class="icon-circle"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 22h18"/><path d="M6 18v-7"/><path d="M10 18v-7"/><path d="M14 18v-7"/><path d="M18 18v-7"/><path d="M12 2 20 7H4z"/></svg></span>
             <h3>Banking &amp; Financial Services</h3>
             <p>Card and loan sales, onboarding, KYC and collections for banks, NBFCs and fintechs.</p>
@@ -71,7 +73,7 @@
           </article>
         </div>
         <div data-iv="{&quot;f&quot;:{&quot;opacity&quot;:0,&quot;y&quot;:40},&quot;c&quot;:[180,26],&quot;d&quot;:110}">
-          <article class="card" id="insurance" data-lift style="scroll-margin-top:2rem">
+          <article class="card" id="insurance" data-lift style="scroll-margin-top:6rem">
             <span class="icon-circle"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg></span>
             <h3>Insurance</h3>
             <p>Policy sales, renewals, claims assistance and policyholder service.</p>
@@ -79,7 +81,7 @@
           </article>
         </div>
         <div data-iv="{&quot;f&quot;:{&quot;opacity&quot;:0,&quot;y&quot;:40},&quot;c&quot;:[180,26],&quot;d&quot;:220}">
-          <article class="card" id="telecom" data-lift style="scroll-margin-top:2rem">
+          <article class="card" id="telecom" data-lift style="scroll-margin-top:6rem">
             <span class="icon-circle"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></svg></span>
             <h3>Telecom &amp; Internet</h3>
             <p>Activations, plan upgrades, billing queries and technical support.</p>
@@ -87,7 +89,7 @@
           </article>
         </div>
         <div data-iv="{&quot;f&quot;:{&quot;opacity&quot;:0,&quot;y&quot;:40},&quot;c&quot;:[180,26],&quot;d&quot;:330}">
-          <article class="card" id="ecommerce" data-lift style="scroll-margin-top:2rem">
+          <article class="card" id="ecommerce" data-lift style="scroll-margin-top:6rem">
             <span class="icon-circle"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg></span>
             <h3>E-commerce &amp; Retail</h3>
             <p>Order support, returns, seller onboarding and catalogue management.</p>
@@ -95,7 +97,7 @@
           </article>
         </div>
         <div data-iv="{&quot;f&quot;:{&quot;opacity&quot;:0,&quot;y&quot;:40},&quot;c&quot;:[180,26]}">
-          <article class="card" id="healthcare" data-lift style="scroll-margin-top:2rem">
+          <article class="card" id="healthcare" data-lift style="scroll-margin-top:6rem">
             <span class="icon-circle"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27"/></svg></span>
             <h3>Healthcare</h3>
             <p>Appointment scheduling, patient helpdesk and medical records administration.</p>
@@ -103,7 +105,7 @@
           </article>
         </div>
         <div data-iv="{&quot;f&quot;:{&quot;opacity&quot;:0,&quot;y&quot;:40},&quot;c&quot;:[180,26],&quot;d&quot;:110}">
-          <article class="card" id="travel" data-lift style="scroll-margin-top:2rem">
+          <article class="card" id="travel" data-lift style="scroll-margin-top:6rem">
             <span class="icon-circle"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg></span>
             <h3>Travel &amp; Hospitality</h3>
             <p>Reservations, booking changes and round-the-clock guest support.</p>
@@ -111,7 +113,7 @@
           </article>
         </div>
         <div data-iv="{&quot;f&quot;:{&quot;opacity&quot;:0,&quot;y&quot;:40},&quot;c&quot;:[180,26],&quot;d&quot;:220}">
-          <article class="card" id="education" data-lift style="scroll-margin-top:2rem">
+          <article class="card" id="education" data-lift style="scroll-margin-top:6rem">
             <span class="icon-circle"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M22 10v6"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></span>
             <h3>Education &amp; EdTech</h3>
             <p>Admissions counselling, lead nurturing and student support.</p>
@@ -119,7 +121,7 @@
           </article>
         </div>
         <div data-iv="{&quot;f&quot;:{&quot;opacity&quot;:0,&quot;y&quot;:40},&quot;c&quot;:[180,26],&quot;d&quot;:330}">
-          <article class="card" id="real-estate" data-lift style="scroll-margin-top:2rem">
+          <article class="card" id="real-estate" data-lift style="scroll-margin-top:6rem">
             <span class="icon-circle"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg></span>
             <h3>Real Estate</h3>
             <p>Lead qualification, site-visit scheduling and follow-ups for developers and brokers.</p>

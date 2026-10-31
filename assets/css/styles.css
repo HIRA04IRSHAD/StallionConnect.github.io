@@ -172,14 +172,31 @@ main { display: block; width: 100%; overflow-x: clip; padding: .5rem; }
 .sec-body { margin-top: 3.5rem; }
 
 /* ---------- header ---------- */
-.site-header { display: flex; align-items: center; padding: 1.5rem 1.5rem 0; font-size: .75rem; color: #fff; position: relative; z-index: 5; }
-@media (min-width: 640px) { .site-header { padding: 2rem 2.5rem 0; } }
+/* Fixed bar: sits over the navy hero at the top, then floats as a glass pill once scrolled */
+.site-header { position: fixed; top: 0; left: .5rem; right: .5rem; z-index: 60; pointer-events: none; }
+@media (min-width: 640px) { .site-header { left: .75rem; right: .75rem; } }
+.hdr-bar {
+  pointer-events: auto; display: flex; align-items: center; max-width: 100%; margin: 0 auto;
+  padding: 1.5rem 1.5rem 0; font-size: .75rem; color: #fff;
+  border: 1px solid transparent; border-radius: var(--radius-pill);
+  transition: max-width .6s var(--expo), margin .6s var(--expo), padding .6s var(--expo), background-color .6s var(--expo), border-color .6s var(--expo), box-shadow .6s var(--expo);
+}
+@media (min-width: 640px) { .hdr-bar { padding: 2rem 2.5rem 0; } }
+.site-header.is-scrolled .hdr-bar {
+  max-width: 72rem; margin-top: .75rem; padding: .5rem .5rem .5rem 1.5rem;
+  background: rgba(15, 47, 99, .82); border-color: rgba(255, 255, 255, .12);
+  box-shadow: 0 1.25rem 3rem -1.5rem rgba(15, 47, 99, .55);
+  -webkit-backdrop-filter: blur(16px) saturate(140%); backdrop-filter: blur(16px) saturate(140%);
+}
+.site-header.is-scrolled .brand img { height: 2.25rem; }
+.hdr-space { height: 4.25rem; flex-shrink: 0; }
+@media (min-width: 640px) { .hdr-space { height: 4.75rem; } }
 .nav-left { display: none; flex: 1; gap: 2rem; }
 .nav-left a { color: rgba(255, 255, 255, .9); transition: color .2s; text-transform: uppercase; letter-spacing: .025em; }
 .nav-left a:hover, .nav-left a[aria-current="page"] { color: #fff; }
 .nav-left a[aria-current="page"] { text-decoration: underline; text-underline-offset: .35em; }
 .brand { flex: 1; display: flex; align-items: center; }
-.brand img { height: 2.75rem; width: auto; }
+.brand img { height: 2.75rem; width: auto; transition: height .6s var(--expo); }
 @media (min-width: 1024px) { .nav-left { display: flex; } .brand { justify-content: center; } }
 .header-right { flex: 1; display: flex; justify-content: flex-end; align-items: center; gap: 1rem; }
 @media (min-width: 640px) { .header-right { gap: 1.25rem; } }
@@ -360,14 +377,14 @@ main { display: block; width: 100%; overflow-x: clip; padding: .5rem; }
 .scope .check-list li:last-child { border-bottom: 0; padding-bottom: 0; }
 
 /* ---------- services page ---------- */
-.subnav { position: sticky; top: .5rem; z-index: 40; margin-top: .75rem; display: flex; justify-content: center; pointer-events: none; }
-@media (min-width: 640px) { .subnav { top: .75rem; } }
+.subnav { position: sticky; top: 4.75rem; z-index: 40; margin-top: .75rem; display: flex; justify-content: center; pointer-events: none; }
+@media (min-width: 640px) { .subnav { top: 5.25rem; } }
 .subnav-track { pointer-events: auto; display: flex; gap: .25rem; overflow-x: auto; scrollbar-width: none; max-width: 100%; padding: .375rem; border-radius: var(--radius-pill); background: rgba(255, 255, 255, .85); border: 1px solid var(--hairline); box-shadow: 0 .5rem 1.5rem rgba(15, 47, 99, .08); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); }
 .subnav-track::-webkit-scrollbar { display: none; }
 .subnav-track a { flex-shrink: 0; font-size: .75rem; font-weight: 500; text-transform: uppercase; letter-spacing: .06em; padding: .55rem 1rem; border-radius: var(--radius-pill); color: var(--ink-soft); transition: background-color .25s, color .25s; }
 .subnav-track a:hover { color: var(--ink); }
 .subnav-track a.is-active { background: var(--ink); color: #fff; }
-.svc { scroll-margin-top: 5rem; }
+.svc { scroll-margin-top: 9rem; }
 .svc + .svc { margin-top: .75rem; }
 .svc-grid { display: grid; grid-template-columns: 1fr; gap: 3rem; }
 @media (min-width: 1024px) { .svc-grid { grid-template-columns: 1.5fr 1fr; gap: 5rem; align-items: start; } }

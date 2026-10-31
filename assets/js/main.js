@@ -44,8 +44,9 @@ function lock() {
 function unlock() {
   if (locks > 0 && --locks === 0) { html.classList.remove('locked'); lenis?.start(); }
 }
+// leaves room for the fixed header
 function scrollToEl(el) {
-  if (lenis) lenis.scrollTo(el, { offset: -16 });
+  if (lenis) lenis.scrollTo(el, { offset: -96 });
   else el.scrollIntoView({ behavior: 'smooth' });
 }
 
@@ -310,6 +311,12 @@ document.addEventListener('click', (e) => {
   scrollToEl(target);
   history.replaceState(null, '', url.hash);
 });
+
+/* ---------- fixed header: floats as a pill once the page scrolls ---------- */
+const siteHeader = $('#site-header');
+const updateHeader = () => siteHeader.classList.toggle('is-scrolled', window.scrollY > 24);
+updateHeader();
+addEventListener('scroll', updateHeader, { passive: true });
 
 /* ---------- fullscreen menu ---------- */
 const menu = $('#menu'), burger = $('#burger');
